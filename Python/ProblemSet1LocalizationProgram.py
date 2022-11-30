@@ -53,7 +53,7 @@ def move(p, motions, prob_move):
         Exact_y_index = (y + motions[0]) % len(p)
         Stay_y_index = y
         for x in range(len(p[0])):
-            Exact_x_index = (x + motions[1]) % len(p[0])            
+            Exact_x_index = (x + motions[1]) % len(p[0])
             Stay_x_index = x
             new_p[Exact_y_index][Exact_x_index] += p[y][x] * prob_move
             new_p[Stay_y_index][Stay_x_index] += p[y][x] * (1 - prob_move)
@@ -61,7 +61,7 @@ def move(p, motions, prob_move):
 
 
 def sense(p, colors, measurement, sensor_right):
-    q = [[value for index,value in enumerate((p[row]))] for row in range(len(p))]
+    q = [[value for index, value in enumerate((p[row]))] for row in range(len(p))]
     prob_sum = 0
     for y in range(len(p)):
         for x in range(len(p[0])):

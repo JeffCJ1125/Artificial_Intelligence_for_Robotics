@@ -10,7 +10,7 @@ p = prob.get_uniform_distribution(5)
 # print(prob.get_entropy(p))
 world = ["green", "red", "red", "green", "green"]
 measurements = ["red", "red"]
-motions = [1,1]
+motions = [1, 1]
 pHit = 0.6
 pMiss = 0.2
 pExact = 0.8
@@ -42,8 +42,8 @@ def move(p, U):
 
 
 for i in range(len(measurements)):
-    p = sense(p,measurements[i])
-    p = move(p,motions[i])
+    p = sense(p, measurements[i])
+    p = move(p, motions[i])
 print(p)
 
 # for i in range(len(measurements)):
